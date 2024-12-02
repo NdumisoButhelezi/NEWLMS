@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+{% block title %}{{ course.title }}{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto">
+    <h1 class="text-3xl font-bold mb-8">{{ course.title }}</h1>
+    
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-xl font-semibold mb-4">Course Overview</h2>
+        <p class="text-gray-600 mb-4">{{ course.description }}</p>
+        
+        <div class="mb-4">
+            <h3 class="font-semibold mb-2">Prerequisites:</h3>
+            <ul class="list-disc list-inside">
+                {% for prereq in course.prerequisites %}
+                <li class="text-gray-600">{{ prereq }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        
+        <div class="mb-4">
+            <h3 class="font-semibold mb-2">Skills you'll learn:</h3>
+            <div class="flex flex-wrap gap-2">
+                {% for skill in course.skills %}
+                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">{{ skill }}</span>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    
+    <div class="bg-white p-6 rounded-lg shadow-md mb-8">
+        <h2 class="text-xl font-semibold mb-4">Course Modules</h2>
+        <div class="space-y-4">
+            {% for module in course.modules %}
+            <div class="border-b pb-4">
+                <h3 class="font-semibold">{{ module.title }}</h3>
+                <p class="text-gray-600">Duration: {{ module.duration }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% if quiz %}
+    <div class="bg-white p-6 rounded-lg shadow-md">
+        <h2 class="text-xl font-semibold mb-4">Course Quiz</h2>
+        <p class="text-gray-600 mb-4">Test your knowledge with our course quiz!</p>
+        <a href="{{ url_for('views.quiz', quiz_id=quiz.id) }}" 
+           class="inline-block bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+            Take Quiz
+        </a>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

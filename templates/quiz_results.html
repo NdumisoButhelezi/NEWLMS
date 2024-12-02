@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block title %}Quiz Results{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto text-center">
+    <h1 class="text-3xl font-bold mb-8">Quiz Results</h1>
+    
+    <div class="bg-white p-8 rounded-lg shadow-md">
+        <p class="text-2xl mb-4">Your Score: {{ score }}/{{ total }}</p>
+        <p class="text-gray-600 mb-6">
+            {% if score == total %}
+                Perfect score! Excellent work!
+            {% elif score >= total * 0.7 %}
+                Great job! You've shown good understanding.
+            {% else %}
+                Keep studying! You might want to review the course material.
+            {% endif %}
+        </p>
+        
+        <div class="space-x-4">
+            <a href="{{ url_for('views.courses') }}" 
+               class="inline-block bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                Back to Courses
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

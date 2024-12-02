@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}Welcome to Learning Platform{% endblock %}
+
+{% block content %}
+<div class="text-center">
+    <div class="gradient-bg text-white py-20 px-4 rounded-lg mb-12">
+        <h1 class="text-5xl font-bold mb-4">Welcome to Learning Platform</h1>
+        <p class="text-xl mb-8">Advance your career with our comprehensive courses and job opportunities</p>
+        <div class="flex justify-center space-x-4">
+            <a href="{{ url_for('views.courses') }}" 
+               class="bg-white text-indigo-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                Start Learning
+            </a>
+            <a href="{{ url_for('views.jobs') }}" 
+               class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors">
+                Find Jobs
+            </a>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <div class="w-16 h-16 bg-indigo-100 text-indigo-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Courses</h2>
+                <p class="text-gray-600 mb-6">Expert-led courses in cloud computing, DevOps, and more.</p>
+                <a href="{{ url_for('views.courses') }}" 
+                   class="inline-block bg-indigo-600 text-white px-6 py-2 rounded-lg hover:bg-indigo-700 transition-colors">
+                    Browse Courses
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Job Board</h2>
+                <p class="text-gray-600 mb-6">Find your next career opportunity in tech.</p>
+                <a href="{{ url_for('views.jobs') }}" 
+                   class="inline-block bg-green-600 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                    View Jobs
+                </a>
+            </div>
+        </div>
+
+        <div class="bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300">
+            <div class="p-6">
+                <div class="w-16 h-16 bg-purple-100 text-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                </div>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">CV Builder</h2>
+                <p class="text-gray-600 mb-6">Create a professional CV with AI assistance.</p>
+                <a href="{{ url_for('views.cv_builder') }}" 
+                   class="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition-colors">
+                    Build CV
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mt-16 bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold text-gray-800 mb-6">Why Choose Us?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="text-left">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Expert-Led Courses</h3>
+                <p class="text-gray-600">Learn from industry professionals with real-world experience.</p>
+            </div>
+            <div class="text-left">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Career Support</h3>
+                <p class="text-gray-600">Get guidance and support to advance your tech career.</p>
+            </div>
+            <div class="text-left">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">AI-Powered Tools</h3>
+                <p class="text-gray-600">Leverage AI technology to create professional CVs.</p>
+            </div>
+            <div class="text-left">
+                <h3 class="text-xl font-semibold text-gray-800 mb-2">Job Opportunities</h3>
+                <p class="text-gray-600">Connect with top tech companies hiring now.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
