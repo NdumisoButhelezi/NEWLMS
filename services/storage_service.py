@@ -9,7 +9,7 @@ class StorageService:
 
     @classmethod
     def save_file(cls, file: FileStorage) -> Tuple[bool, Union[str, None], Union[str, None]]:
-        """Save file to storage and return status, filename, and error message."""
+        """Save file to temporary storage and return status, filename, and error message."""
         if not file or file.filename == '':
             return False, None, "No file selected"
 
@@ -18,7 +18,11 @@ class StorageService:
 
         filename = secure_filename(file.filename)
         try:
-            file.save(os.path.join(current_app.config['UPLOAD_FOLDER'], filename))
+            # In serverless environment, save to /tmp
+            tmp_dir = '/tmp'
+            os.makedirs(tmp_dir, exist_ok=True)
+            file_path = os.path.join(tmp_dir, filename)
+            file.save(file_path)
             return True, filename, None
         except Exception as e:
             return False, None, f"Error saving file: {str(e)}"
