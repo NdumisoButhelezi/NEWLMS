@@ -30,12 +30,6 @@ pip install -r requirements.txt
 ```
 ```
 
-This Markdown snippet will display images correctly when viewed on GitHub, as the images are being linked via URLs.
-- Python 3.x
-if you do not have python installed on your machine you can go download it here : https://www.python.org/downloads/
-- `pip` (Python's package installer)
-same goes here : https://pypi.org/project/pip/
-
 ### Dependencies
 
 This project requires the following Python packages:
