@@ -1,6 +1,4 @@
-Got it! If you're looking for a single script that includes everything, including displaying images from URLs, here's how you can structure it in a single block of Markdown:
 
-```markdown
 # Learning Platform with Simulated Cloud Services
 
 ## Prerequisites
