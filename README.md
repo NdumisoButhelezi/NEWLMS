@@ -1,11 +1,38 @@
+Got it! If you're looking for a single script that includes everything, including displaying images from URLs, here's how you can structure it in a single block of Markdown:
+
+```markdown
 # Learning Platform with Simulated Cloud Services
 
-Before you can run this project locally, ensure you have the following installed:
-open your cmd and enter the command on the first image
-![image](https://github.com/user-attachments/assets/675a7de6-f619-4794-b7ab-1568f9ddff9e)
-if you have python installed you will see something like this in your cmd as a response maybe your python version will be different who knows, if you get anything else i put a link somewhere here to download python
-![image](https://github.com/user-attachments/assets/832a8ee0-24ba-4c46-a296-be21912a5f3e)
+## Prerequisites
 
+Before running this project locally, ensure you have Python installed on your system. Follow the steps below:
+
+### 1. Check if Python is Installed
+
+Open your command prompt (CMD) and enter the following command:
+
+```bash
+python --version
+```
+
+- If Python is installed, you will see something like this in your command prompt (your Python version may vary):
+
+  ![Python Version](https://github.com/user-attachments/assets/675a7de6-f619-4794-b7ab-1568f9ddff9e)
+
+- If you get an error or a different message, it means Python is not installed. In that case, download and install Python from the official [Python website](https://www.python.org/downloads/).
+
+  ![Python Download](https://github.com/user-attachments/assets/832a8ee0-24ba-4c46-a296-be21912a5f3e)
+
+### 2. Install Dependencies
+
+Once Python is set up, navigate to the project directory and install the required dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+```
+
+This Markdown snippet will display images correctly when viewed on GitHub, as the images are being linked via URLs.
 - Python 3.x
 if you do not have python installed on your machine you can go download it here : https://www.python.org/downloads/
 - `pip` (Python's package installer)
