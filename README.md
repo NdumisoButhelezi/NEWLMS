@@ -28,8 +28,6 @@ Once Python is set up, navigate to the project directory and install the require
 ```bash
 pip install -r requirements.txt
 ```
-```
-
 ### Dependencies
 
 This project requires the following Python packages:
