@@ -19,7 +19,7 @@ python --version
 
 - If you get an error or a different message, it means Python is not installed. In that case, download and install Python from the official [Python website](https://www.python.org/downloads/).
 
-  ![Python Download](https://github.com/user-attachments/assets/832a8ee0-24ba-4c46-a296-be21912a5f3e)
+ ![image](https://github.com/user-attachments/assets/67291d31-10b4-4e4e-9027-1a3d3bb57259)
 
 ### 2. Install Dependencies
 
