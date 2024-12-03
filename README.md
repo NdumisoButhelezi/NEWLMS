@@ -1,5 +1,27 @@
 # Learning Platform with Simulated Cloud Services
 
+Before you can run this project locally, ensure you have the following installed:
+open your cmd and enter the command on the first image
+![image](https://github.com/user-attachments/assets/675a7de6-f619-4794-b7ab-1568f9ddff9e)
+if you have python installed you will see something like this in your cmd as a response maybe your python version will be different who knows, if you get anything else i put a link somewhere here to download python
+![image](https://github.com/user-attachments/assets/832a8ee0-24ba-4c46-a296-be21912a5f3e)
+
+- Python 3.x
+if you do not have python installed on your machine you can go download it here : https://www.python.org/downloads/
+- `pip` (Python's package installer)
+same goes here : https://pypi.org/project/pip/
+
+### Dependencies
+
+This project requires the following Python packages:
+
+- **Flask** - A lightweight WSGI web application framework.
+- **python-dotenv** - A tool to read key-value pairs from `.env` file into environment variables.
+- **Werkzeug** - A comprehensive WSGI web application library that Flask is built on.
+- **typing-extensions** - Backport of the latest typing features from Python 3.10 and beyond.
+- **Flask-SQLAlchemy** - Adds SQLAlchemy support to Flask for easy database integration.
+- **Flask-Login** - Provides session management for Flask applications.
+- **Jinja2** - A templating engine for Python, used by Flask to render HTML.
 A Flask-based learning platform that simulates cloud services for course management, job searching, and CV generation.
 
 ## Features
