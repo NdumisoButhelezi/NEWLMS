@@ -15,7 +15,7 @@ python --version
 
 - If Python is installed, you will see something like this in your command prompt (your Python version may vary):
 
-  ![Python Version](https://github.com/user-attachments/assets/675a7de6-f619-4794-b7ab-1568f9ddff9e)
+  ![Python Download](https://github.com/user-attachments/assets/832a8ee0-24ba-4c46-a296-be21912a5f3e)
 
 - If you get an error or a different message, it means Python is not installed. In that case, download and install Python from the official [Python website](https://www.python.org/downloads/).
 
