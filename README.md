@@ -200,6 +200,4 @@ The application is configured for deployment on various platforms:
 4. Write/update tests
 5. Submit a pull request
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
